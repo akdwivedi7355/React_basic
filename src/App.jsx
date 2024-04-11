@@ -1,27 +1,27 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  let [counter,setcounter] =useState(0)
+  const addvalue =()=>{
+    counter= counter+1;
+    setcounter(counter)
+  }
+  const decrese=()=>{
+    counter=counter-1;
+    setcounter(counter)
+  }
+  const reset=()=>{
+    setcounter(0)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <h1> hello Aditya</h1>
+    <h2>add value = {counter}</h2>
+      <button onClick={addvalue}>Add value</button>
+      <br />
+      <button onClick={decrese}>decrease value</button>
+      <button onClick={reset}>reset value</button>
     </div>
   );
 }
